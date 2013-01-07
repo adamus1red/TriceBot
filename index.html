@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Tricebot by adamus1red</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Tricebot</h1>
+        <h2></h2>
+
+        <section id="downloads">
+          <a href="https://github.com/adamus1red/TriceBot/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/adamus1red/TriceBot/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/adamus1red/TriceBot" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>About</h1>
+
+<p>This is a bot for Gazelle websites that want to secure their IRC channels. It allows users to authenticate using their credentials on-site and thus be authorised for official channels on IRC.</p>
+
+<h1>Features</h1>
+
+<p>Trice is fast, secure, reliable and stable. It is written in perl and utilizes the POE::Component::IRC framework. It has a plugin system which allows admins to load/unload plugins on the fly without the need to restart the bot. It also has a logging system with error reporting.</p>
+
+<h1>Requriements</h1>
+
+<p>Trice uses perl with some perl modules.</p>
+
+<h2>Debian/Ubuntu</h2>
+
+<p><code>apt-get install perl libpoe-component-irc-perl libpoe-component-pluggable-perl libwww-perl libconfig-simple-perl libmodule-refresh-perl libwww-mechanize-perl libnet-dns-perl libgeo-ip-perl libdate-pcalc-perl liblog-log4perl-perl libclass-unload-perl</code></p>
+
+<h2>Download</h2>
+
+<p>You can download an archive or checkout the latest stable revision from GIT.</p>
+
+<h1>Configuration</h1>
+
+<p>The bot requires bot.cfg to be in its folder. It comes with an example configuration file bot.cfg.example which documents all the configuration options.</p>
+
+<h2>Required database schema</h2>
+
+<p><em>Table</em>: users_main
+<em>Fields</em>: ID, Username, IRCKey, PassHash, Secret, PermissionID, onirc</p>
+
+<p><em>Table</em>: permissions
+<em>Fields</em>: ID, Name</p>
+
+<p><em>Table</em>: irc_channels
+<em>Fields</em>: ID, Channel, Level</p>
+
+<h1>Plugins</h1>
+
+<p>Trice is extensible through a plugin system. Currently there are three official plugins available:</p>
+
+<ul>
+<li>User - A simple !user command to view user stats. </li>
+<li>Enter - A plugin that secures your IRC channels.</li>
+<li>Announce - Allows your site to send messages to IRC.</li>
+<li>IRC Bonus - Marks a user as on irc when they join your channel.</li>
+</ul><h1>Running</h1>
+
+<p>The bot can be run very simply by the command <code>perl bot.pl</code></p>
+
+<p>ubuntu/debian init script: <a href="https://github.com/AzzABTN/TriceBot/wiki/INIT-Script">https://github.com/AzzABTN/TriceBot/wiki/INIT-Script</a></p>
+
+<h1>Commands</h1>
+
+<h3>Enter</h3>
+
+<p>/msg Trice ENTER  &lt;#channel&gt;
+Only lets the user in if they have the correct Nick, IRCKey and have perms to join the channel.</p>
+
+<h3>User</h3>
+
+<p>!user 
+This command gives a simple line about user info eg: [ AzzA - Hello ] :: [ Sysop ] :: [ Uploaded: 507.73 MB | Downloaded: 3.94 GB | Ratio: 0.13 ] :: [ <a href="https://broadcasthe.net/user.php?id=1">https://broadcasthe.net/user.php?id=1</a> ]
+It gives extra info like IP and email, when used in the staff channel.</p>
+
+<h1>Support</h1>
+
+<p>If you need support you can use the forum here, the issue tracker or hit me up on IRC. You may join our IRC at irc://irc.omgwtfhax.net #Trice</p>
+
+<h1>Information</h1>
+
+<p>Trice was written by AzzA using the POE::Component::IRC module in perl.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
